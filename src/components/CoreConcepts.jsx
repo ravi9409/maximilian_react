@@ -1,12 +1,13 @@
 import './CoreConcepts.css';
 import { CORE_CONCEPTS } from '../../data.js';
 import CoreConcept from './CoreConcept.jsx';
+import Section from './Section.jsx';
 
 
 function CoreConcepts(props) {
     return (
         <>
-            <section id='core-concepts'>
+            <Section id="core-concepts" title="Core Concepts">
                 <ul>
                     {CORE_CONCEPTS.map((concept) => (
                         <CoreConcept
@@ -17,7 +18,7 @@ function CoreConcepts(props) {
                         />
                     ))}
                 </ul>
-            </section>
+            </Section>
         </>
     );
 }
