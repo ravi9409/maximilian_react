@@ -3,6 +3,7 @@ import './Header.css';
 
 
 const reactDescription = ['Fundamentals', 'Crucial', 'Core'];
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
