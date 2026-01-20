@@ -1,12 +1,24 @@
 import './CoreConcepts.css';
+import { CORE_CONCEPTS } from '../../data.js';
+import CoreConcept from './CoreConcept.jsx';
+
 
 function CoreConcepts(props) {
     return (
-        <li>
-            <img src={props.image} alt="React core concepts" />
-            <h2>{props.title}</h2>
-            <p>{props.description}</p>
-        </li>
+        <>
+            <section id='core-concepts'>
+                <ul>
+                    {CORE_CONCEPTS.map((concept) => (
+                        <CoreConcept
+                            key={concept.title}
+                            title={concept.title}
+                            description={concept.description}
+                            image={concept.image}
+                        />
+                    ))}
+                </ul>
+            </section>
+        </>
     );
 }
 
